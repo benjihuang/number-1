@@ -102,7 +102,7 @@ var user = (function (user) {
 
                 //TODO: 判斷隕石有沒有打到玩家
                 if (Utils.aabb(playerRect, asteroidRect)) {
-                    this.player.hurt((3 - a.size) * 20);
+                    this.player.hurt((3 - a.size) * 15);
                 }
                 if (a.hp <= 0) this.score += 20;
             })//隕石程式末端
@@ -119,7 +119,7 @@ var user = (function (user) {
 
                 //TODO: 判斷補血包有沒有打到玩家
                 if (Utils.aabb(playerRect, bloodPackRect)) {
-                    this.player.health((3 + a.size) * 20);
+                    this.player.health((3 + a.size) * 5);
                     a.hurt(Math.floor(Math.random() * 58));
                         b.used = true;
                         this.detach(b);
@@ -155,7 +155,7 @@ var user = (function (user) {
             ctx.textBaseline = 'top';
             ctx.font = '20px Arial';
             ctx.fillStyle = 'white';
-            ctx.fillText("HP:" + this.player.hp + " / Score:", 0, 0)
+            ctx.fillText("HP:" + this.player.hp + " / Score:"+this.score, 0, 0);
             // Hint: 用fillStyle, fillText
         }
 
