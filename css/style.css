@@ -1,0 +1,89 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url('MaterialIcons-Regular.woff2') format('woff2');
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #122565;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #122565;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #5a77d8;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+[hidden] {
+    display: none;
+}
+
+.clear {
+    clear: both;
+}
+
+body:not(.mode-debug) {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    user-select: none !important;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: "Microsoft JhengHei UI", Arial, sans-serif;
+}
+
+.container {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#__game_canvas__ {
+    position: relative;
+    z-index: 1000;
+    pointer-events: auto;
+}
+
+.container-wrap {
+    width: 100%;
+    height: 100%;
+    display: table;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*z-index: 100;*/
+    background: #000;
+    pointer-events: none;
+}
